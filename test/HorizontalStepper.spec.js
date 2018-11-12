@@ -1,4 +1,4 @@
-import { mount, shallow } from "@vue/test-utils";
+import { mount, shallowMount } from "@vue/test-utils";
 import VueTestUtils from "@vue/test-utils";
 import Vue from "vue";
 import HorizontalStepper from "../src/HorizontalStepper";
@@ -36,7 +36,7 @@ describe("HorizontalStepper.spec.js", () => {
   })
 
   test("keep alive component steppers", () => {
-    cmp = shallow(HorizontalStepper);
+    cmp = shallowMount(HorizontalStepper);
     expect(cmp.props().keepAlive).toBeTruthy();
   });
 
@@ -64,7 +64,7 @@ describe("HorizontalStepper.spec.js", () => {
 
     expect(cmp.vm.finalStep).toBeTruthy();
     expect(cmp.emitted('stepper-finished'));
-    
+
     let finishButton = cmp.find('.stepper-button.next');
     let fbSpan = finishButton.find('span');
 
