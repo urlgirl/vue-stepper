@@ -126,8 +126,11 @@ export default {
   },
 
   methods: {
+  
     isStepActive(index, step) {
-      if (this.currentStep.index === index) {
+      if(step.completed){
+        return "completed";
+      }else if (this.currentStep.index === index) {
         return "activated";
       } else {
         return "deactivated";
