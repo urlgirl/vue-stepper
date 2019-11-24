@@ -34,7 +34,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "npm": "^5.10.0",
     "vue": "^2.5.16"
   },
   "jest": {
